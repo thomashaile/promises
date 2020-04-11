@@ -1,0 +1,101 @@
+{
+  "path": "/exercises",
+  "dirs": [
+    {
+      "path": "/1-identifying-closure",
+      "files": [
+        {
+          "path": "/example-1-returning-functions.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-2-never-creates-closure.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-3-always-creates-closure.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-4-sometimes-creates-closure-a.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-5-sometimes-creates-closure-b.js",
+          "isExample": true
+        }
+      ]
+    },
+    {
+      "path": "/2-basic-closure",
+      "files": [
+        {
+          "path": "/example-parent-and-own-values.js",
+          "isExample": true
+        },
+        {
+          "path": "/exercise-1.js"
+        },
+        {
+          "path": "/exercise-2.js"
+        },
+        {
+          "path": "/exercise-3.js"
+        },
+        {
+          "path": "/exercise-4.js"
+        }
+      ]
+    },
+    {
+      "path": "/3-closed-variables",
+      "files": [
+        {
+          "path": "/example-1-a-free-variable.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-2-not-from-closure.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-3-from-closure.js",
+          "isExample": true
+        },
+        {
+          "path": "/exercise-1.js"
+        },
+        {
+          "path": "/exercise-2.js"
+        }
+      ]
+    },
+    {
+      "path": "/4-sharing-state",
+      "files": [
+        {
+          "path": "/example-1-pure-functions.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-2-pure-closures.js",
+          "isExample": true
+        },
+        {
+          "path": "/example-3-mutating-closures.js",
+          "isExample": true
+        },
+        {
+          "path": "/exercise-1.js"
+        },
+        {
+          "path": "/exercise-2.js"
+        },
+        {
+          "path": "/exercise-3.js"
+        }
+      ]
+    }
+  ],
+  "lastBuild": "2020-04-11T14:31:30.105Z"
+}
