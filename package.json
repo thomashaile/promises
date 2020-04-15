@@ -1,12 +1,11 @@
 {
-  "name": "event-loop",
+  "name": "promises",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "build": "node build.js",
-    "start": "npm run build && node server.js",
-    "review": "npm run build && node review.js"
+    "start": "npm run build && node server.js"
   },
   "author": "",
   "license": "MIT"

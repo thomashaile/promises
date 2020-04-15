@@ -23,21 +23,18 @@ export default class LiveStudy {
 
     const detailsEl = document.createElement('details');
     const summaryEl = document.createElement('summary');
-    summaryEl.innerHTML = virDir.path;
-    // const loadAllButton = document.createElement('button');
-    // loadAllButton.innerHTML = 'load exercises';
-    // loadAllButton.onclick = () => {
-    //   virDir.exercises.forEach(exercise =>
-    //     exercise
-    //       .load()
-    //       .then(() => {
-    //         loadAllButton.innerHTML = 'exercises are loaded';
-    //         loadAllButton.onclick = () => console.log('exercises are loaded');
-    //       })
-    //       .catch(err => console.error(err))
-    //   );
-    // };
-    // summaryEl.appendChild(loadAllButton);
+    // summaryEl.innerHTML = virDir.path;
+    const loadAllButton = document.createElement('button');
+    loadAllButton.innerHTML = virDir.path + ' (run all)';
+    loadAllButton.onclick = () => {
+      console.log('loading: ' + virDir.path);
+      virDir.exercises.forEach(exercise =>
+        exercise.fetchCode()
+          .then(() => exercise.run(false))
+          .catch(err => console.error(err))
+      );
+    };
+    summaryEl.appendChild(loadAllButton);
     detailsEl.appendChild(summaryEl);
 
     const subListEl = document.createElement('ul');

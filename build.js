@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+const TITLE = 'promises';
 const DIR = './exercises'
   + (process.argv[2]
     ? process.argv[2]
@@ -52,6 +53,7 @@ const register = function (dirPath) {
 console.log('\n--- registering .js files in ' + DIR + ' ---\n');
 const registered = register(DIR);
 registered.lastBuild = (new Date()).toJSON();
+registered.title = TITLE;
 
 console.log('\n--- writing ' + DIR + '/index.json ---\n');
 const stringifiedReg = JSON.stringify(registered, null, '  ');

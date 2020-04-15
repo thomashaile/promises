@@ -2,100 +2,81 @@
   "path": "/exercises",
   "dirs": [
     {
-      "path": "/1-identifying-closure",
+      "path": "/examples-1-new-promise",
       "files": [
         {
-          "path": "/example-1-returning-functions.js",
-          "isExample": true
+          "path": "/1-new-promise.js"
         },
         {
-          "path": "/example-2-never-creates-closure.js",
-          "isExample": true
+          "path": "/2-pending-vs-settled.js"
         },
         {
-          "path": "/example-3-always-creates-closure.js",
-          "isExample": true
+          "path": "/3-sync-vs-async.js"
         },
         {
-          "path": "/example-4-sometimes-creates-closure-a.js",
-          "isExample": true
-        },
-        {
-          "path": "/example-5-sometimes-creates-closure-b.js",
-          "isExample": true
+          "path": "/4-cleaner-promises.js"
         }
-      ]
+      ],
+      "isExample": true
     },
     {
-      "path": "/2-basic-closure",
+      "path": "/examples-2-consumers",
       "files": [
         {
-          "path": "/example-parent-and-own-values.js",
-          "isExample": true
+          "path": "/1-dot-then.js"
         },
         {
-          "path": "/exercise-1.js"
+          "path": "/2-cleaner-consumers.js"
         },
         {
-          "path": "/exercise-2.js"
+          "path": "/3-dot-catch.js"
         },
         {
-          "path": "/exercise-3.js"
+          "path": "/4-dot-finally.js"
         },
         {
-          "path": "/exercise-4.js"
+          "path": "/5-chaining-consumers.js"
         }
-      ]
+      ],
+      "isExample": true
     },
     {
-      "path": "/3-closed-variables",
+      "path": "/fill-in-the-blanks",
       "files": [
         {
-          "path": "/example-1-a-free-variable.js",
+          "path": "/challenge-1.js"
+        },
+        {
+          "path": "/challenge-2.js"
+        },
+        {
+          "path": "/challenge-3.js"
+        },
+        {
+          "path": "/challenge-4.js"
+        },
+        {
+          "path": "/challenge-5.js"
+        },
+        {
+          "path": "/challenge-6.js"
+        },
+        {
+          "path": "/challenge-7.js"
+        },
+        {
+          "path": "/challenge-8.js"
+        },
+        {
+          "path": "/challenge-9.js"
+        },
+        {
+          "path": "/example.js",
           "isExample": true
-        },
-        {
-          "path": "/example-2-not-from-closure.js",
-          "isExample": true
-        },
-        {
-          "path": "/example-3-from-closure.js",
-          "isExample": true
-        },
-        {
-          "path": "/exercise-1.js"
-        },
-        {
-          "path": "/exercise-2.js"
-        }
-      ]
-    },
-    {
-      "path": "/4-sharing-state",
-      "files": [
-        {
-          "path": "/example-1-pure-functions.js",
-          "isExample": true
-        },
-        {
-          "path": "/example-2-pure-closures.js",
-          "isExample": true
-        },
-        {
-          "path": "/example-3-mutating-closures.js",
-          "isExample": true
-        },
-        {
-          "path": "/exercise-1.js"
-        },
-        {
-          "path": "/exercise-2.js"
-        },
-        {
-          "path": "/exercise-3.js"
         }
       ]
     }
   ],
-  "lastBuild": "2020-04-11T14:31:30.105Z"
+  "lastBuild": "2020-04-15T10:16:40.960Z",
+  "title": "promises"
 }

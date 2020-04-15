@@ -17,6 +17,7 @@ export default class Exercise {
     rel: null,
     abs: null
   };
+  code = 'un-fetched';
 
   constructor(file, dirPath) {
     if (file && typeof file.path !== 'string') {
@@ -29,78 +30,62 @@ export default class Exercise {
     this.isExample = file.isExample;
   }
 
-  load(loadingMsg) {
-    // async/await so they log in the correct order
-    if (loadingMsg) {
-      console.log(loadingMsg);
-    };
-    return import('..' + this.path.abs);
+  loadScript(loadingMsg) {
+    if (loadingMsg) console.log(loadingMsg);
+
+    return import('..' + this.path.abs)
+      .catch(err => console.log(err));
   }
 
-  async get(studyType) {
-    // async/await so they log in the correct order
-    try {
-      const res = await fetch('.' + this.path.abs, {
-        headers: {
-          study: studyType
-        }
+  fetchCode(loadingMsg) {
+    if (loadingMsg) console.log(loadingMsg);
+
+    return fetch('.' + this.path.abs)
+      .then(res => {
+        if (res.status != 200) {
+          throw new Error(`${res.status}: ${res.statusText}`);
+        };
+        return res.text();
+      })
+      .then(code => this.code = code)
+      .catch(err => {
+        console.error(err);
+        this.code = '"' + err.stack + '"';
       });
-      const code = await res.text();
-      return code;
-    } catch (err) {
-      throw err;
-    }
   }
 
-  async run(inDebugger) {
-    const mode = inDebugger ? 'in debugger' : 'run code';
-    let code = null;
-    try {
-      const res = await fetch('.' + this.path.abs, {
-        headers: {
-          study: mode
-        }
-      });
-      if (res.status != 200) {
-        throw new Error(`${res.status}: ${res.statusText}`);
-      }
-      code = await res.text();
-    } catch (err) {
-      console.error(err);
-    };
-
-    if (code === null) return;
-
+  run(inDebugger) {
     if (inDebugger) {
-      console.log('\n--- in debugger: ' + this.path.rel + ' ----');
+      console.log('--- in debugger: ' + this.path.abs + ' ----');
       const stepThrough = eval;
-      const debuggered = "debugger; // injected by inDebugger\n\n" + code;
+      const debuggered = "debugger;\n\n" + this.code;
       stepThrough(debuggered);
     } else {
-      console.log('\n--- running: ' + this.path.rel + ' ----');
-      eval(code);
+      console.log('--- running: ' + this.path.abs + ' ----');
+      eval(this.code);
     };
-    // PS. eval errors are uncaught to create VM links in the console
   }
 
   render() {
-    const nameEl = document.createElement('text');
-    // nameEl.innerHTML = this.isExample
-    //   ? '(example) ' + this.path.rel + ' :'
-    //   : this.path.rel + ' :';
-    nameEl.innerHTML = this.path.rel + ' :';
 
-    const runCodeEl = document.createElement('button');
-    runCodeEl.innerHTML = 'run code';
-    runCodeEl.onclick = this.run.bind(this, false);
+    const runButtonEl = document.createElement('button');
+    runButtonEl.innerHTML = 'run: ' + this.path.rel;
+    runButtonEl.onclick = () => {
+      this
+        .fetchCode('\n--- fetching: ' + this.path.abs + ' ---')
+        .then(() => this.run(false));
+    };
 
     const inDebuggerEl = document.createElement('button');
     inDebuggerEl.innerHTML = 'in debugger';
-    inDebuggerEl.onclick = this.run.bind(this, true);
+    inDebuggerEl.onclick = () => {
+      this
+        .fetchCode('\n--- fetching: ' + this.path.abs + ' ---')
+        .then(() => this.run(true));
+    };
 
     const container = document.createElement('text');
-    container.appendChild(nameEl);
-    container.appendChild(runCodeEl);
+    container.appendChild(runButtonEl);
     container.appendChild(inDebuggerEl);
 
     return container;

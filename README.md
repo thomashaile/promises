@@ -1,6 +1,6 @@
-# Closure
+# Promises
 
-Learn how to identify and debug closure.  Once that's under control, learn a how closure can be used to share state between functions
+... words
 
 ## Index
 
@@ -89,26 +89,7 @@ In each folder, the `review.js` script will create a new `REVIEW.md` file.  This
 
 ## Helpful Links
 
-<ul>
-  <li>
-    <a href='https://www.youtube.com/watch?v=CQqwU2Ixu-U' target='_blank'>Fun Fun Function: intro</a>
-  </li>
-  <li>
-    <a href='https://www.youtube.com/watch?v=F3EsDDp4VXg' target='_blank'>Fun Fun Function: long code-along</a>
-  </li>
-  <li>
-    <a href='https://www.youtube.com/watch?v=71AtaJpJHw0' target='_blank'>Techsith</a>
-  </li>
-  <li>
-    <a href='https://www.youtube.com/watch?v=1JsJx1x35c0' target='_blank'>Beau from FCC</a>
-  </li>
-  <li>
-    <a href='https://www.youtube.com/watch?v=-jysK0nlz7A' target='_blank'>Coding Train</a>
-  </li>
-  <li>
-    <a href='https://javascript.info/closure' target='_blank'>javascript.info</a>
-  </li>
-</ul>
+> The exercises in this repository are based on [mariusschulz's promises repository](https://github.com/mariusschulz/egghead-javascript-promises)
 
 
 [TOP](#closure)

@@ -14,7 +14,7 @@ try {
   if (logs.length > LOGS_LIMIT) {
     console.log('--- clearing ' + (logs.length - LOGS_LIMIT) + ' old logs ---');
     for (let i = 0; i < logs.length - LOGS_LIMIT; i++) {
-      fs.unlinkSync(LOG_DIR + logs[i]);
+      fs.unlinkSync(LOG_DIR + '/' + logs[i]);
     };
   };
 } catch (err) {
@@ -45,10 +45,7 @@ console.log('\n--- launching server ---\n');
 const handleRequest = (req, res) => {
   const cycle = ++cycles;
 
-  const studyMode = req.headers.study
-    ? '(' + req.headers.study + ')'
-    : '';
-  log(`${cycle}. request: ${req.method} ${req.url} ${studyMode}`);
+  log(`${cycle}. request: ${req.method} ${req.url}`);
 
   let filePath = req.url === '/'
     ? './index.html'
