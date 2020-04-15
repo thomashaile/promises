@@ -1,6 +1,5 @@
 # Promises
 
-... words
 
 ## Index
 
@@ -9,9 +8,6 @@
   * [server.js](#serverjs)
   * [npm run start](#npm-run-start)
 * [What to Study](#what-to-study)
-* [Reviewing Your Work](#reviewing-your-work)
-  * [review.js](#reviewjs)
-  * [REVIEW.md](#reviewmd)
 * [Helpful Links](#helpful-links)
 
 ---
@@ -42,54 +38,12 @@ Running the server with `$ npm run start` is _almost_ the same as running `$ nod
 
 Happy studying!
 
-[TOP](#closure)
+[TOP](#promises)
 
 ---
 
 ## What to Study
 
-This repository contains 4 folders of exercises. You can [check them out right here](./exercises/REVIEW.md).
+This repository contains 2 folders of examples, and 1 folder of exercises. You can [check them out right here](./exercises).
 
-[TOP](#closure)
-
----
-
-## Reviewing your Work
-
-It's not enough to pass the tests once and move on!
-
-You will need to come back to review your exercises (all of them, not just these `:)`) over the coming months and year if you want to stay sharp and remember everything you've learned.
-
-### `review.js`
-
-To help you and your coaches review your exercises there is a file in this repository named `review.js`.  When you run it node from the top level of this folder (`$ node review.js`), it will evaluate each .js file in this repo and report the results for easy reviewing.
-
-You should run this script before pushing your code so you and your coaches can more easily review your work directly from GitHub.  But you may also find it helpful to run the script at the end of each study session to help you pick up where you left off.
-
-### `REVIEW.md`
-
-> [REVIEW.md]](./exercises/REVIEW.md)
-
-In each folder, the `review.js` script will create a new `REVIEW.md` file.  This file will contain:
-
-* The name of the directory
-* The status of the directory (pass, fail, error, ...)
-* The date and time of the last evaluation
-* Links to all files & sub-directories in the folder (including their status)
-* A section for each .js file including
-  * the name of the file
-  * the status of the file (pass, fail, error, ...)
-  * any assertions and/or errors
-  * a copy of the code that was evaluated
-  * a link to the most recent source code
-
-[TOP](#closure)
-
----
-
-## Helpful Links
-
-> The exercises in this repository are based on [mariusschulz's promises repository](https://github.com/mariusschulz/egghead-javascript-promises)
-
-
-[TOP](#closure)
+[TOP](#promises)
